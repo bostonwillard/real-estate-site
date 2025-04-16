@@ -1,0 +1,134 @@
+<!-- Submit this scratch page URL for grading: https://yourusername.github.io/scratch.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boston Willard - Real Estate Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .highlight-img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    nav {
+      background-color: #004080;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#resume">Résumé</a>
+    <a href="#pictures">Pictures</a>
+    <a href="#scratch">Scratch Page</a>
+    <a href="#app">Web App</a>
+  </nav>
+
+  <header>
+    <h1>Boston Willard</h1>
+    <p>Real Estate | Finance | BYU</p>
+  </header>
+
+  <section id="resume" class="container">
+    <h2>Résumé</h2>
+    <p><strong>Education:</strong> Brigham Young University – Pre-Business Major</p>
+    <p><strong>Experience:</strong> Prospera Growth Fund (Accounting Intern), Peak Capital Partners (Acquisitions Analyst Intern)</p>
+    <p><strong>Skills:</strong> Excel, ARGUS, CoStar, Financial Modeling</p>
+    <p><strong>Awards:</strong> BYU Merit Scholarship, Davis High SBO VP</p>
+  </section>
+
+  <section id="pictures" class="container">
+    <h2>Pictures</h2>
+    <img src="FamilyPhoto.png" class="highlight-img" alt="Family Photo">
+    <img src="me.png" class="highlight-img" alt="Boston Portrait">
+  </section>
+
+  <section id="scratch" class="container">
+    <h2>My Passion: Real Estate</h2>
+    <ol>
+      <li>Why I Love It
+        <ul>
+          <li>Wealth building</li>
+          <li>Time freedom</li>
+          <li>Legacy creation</li>
+        </ul>
+      </li>
+      <li>Areas I'm Exploring
+        <ul>
+          <li>Multifamily</li>
+          <li>Development</li>
+          <li>Private Equity</li>
+        </ul>
+      </li>
+    </ol>
+    <img src="real estate image.png" class="highlight-img" alt="Real Estate Buildings">
+
+    <h3>Watch this video:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5AxwYoy0uyo" frameborder="0" allowfullscreen></iframe>
+
+    <p><a href="https://fsinvestments.com/education/real-estate/" target="_blank">Learn more from FS Investments</a></p>
+    <a href="#top">Back to Top</a>
+  </section>
+
+  <section id="app" class="container">
+    <h2>Mini Web App: Guess the Number</h2>
+    <p>Try to guess a number between 1 and 100.</p>
+    <input type="number" id="guessInput" class="form-control" placeholder="Your guess">
+    <button onclick="checkGuess()" class="btn btn-primary mt-2">Submit</button>
+    <p id="resultText" class="mt-3"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Boston Willard</p>
+  </footer>
+
+  <script>
+    const secret = Math.floor(Math.random() * 100) + 1;
+    function checkGuess() {
+      const guess = parseInt(document.getElementById('guessInput').value);
+      const result = document.getElementById('resultText');
+      if (guess === secret) {
+        result.textContent = "🎉 That's correct!";
+        result.style.color = "green";
+      } else if (guess < secret) {
+        result.textContent = "Too low. Try again.";
+        result.style.color = "orange";
+      } else {
+        result.textContent = "Too high. Try again.";
+        result.style.color = "orange";
+      }
+    }
+  </script>
+</body>
+</html>
